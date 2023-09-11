@@ -1,6 +1,6 @@
 export default function AboutMe() {
   return (
-    <main>
+    <main className="flex-grow">
       <h1>About me</h1>
     </main>
   )

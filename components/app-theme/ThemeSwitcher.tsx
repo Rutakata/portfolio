@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 
 
 export const ThemeSwitcher = () => {
@@ -20,10 +21,10 @@ export const ThemeSwitcher = () => {
 
   return (
     <button
-      className={`w-fit absolute right-5 top-2 p-2 rounded-md hover:scale-110 active:scale-100 duration-200 bg-slate-200 dark:bg-[#212933]`}
+      className={`w-fit h-fit p-2 self-center rounded-full hover:bg-slate-300 hover:dark:bg-[#27303c] duration-200 bg-slate-200 dark:bg-[#2f3a47]`}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
-      {theme === "light" ? "Dark" : "Light"}
+      {theme === "light" ? <BsFillMoonFill size={20} /> : <BsFillSunFill size={20} />}
     </button>
   );
 };

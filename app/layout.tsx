@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@/components/app-theme/ThemeProvider';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Header from '@/components/header/Header';
+import SidebarMenu from '@/components/sidebar-menu/SidebarMenu';
 import Footer from '@/components/footer/Footer';
 import './globals.css';
 
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body className={inter.className + ` min-h-screen flex flex-col dark:bg-slate-900`}>
+      <body className={inter.className + ` min-h-screen flex flex-col dark:bg-slate-900 relative`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
+          <SidebarMenu />
           {children}
           <Footer />
         </ThemeProvider>
