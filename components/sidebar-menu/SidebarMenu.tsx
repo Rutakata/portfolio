@@ -6,7 +6,7 @@ import { AiOutlineArrowRight, AiOutlineArrowLeft, AiFillHome, AiFillAppstore, Ai
 
 
 export default function SidebarMenu() {
-  const [isOpened, setIsOpened] = useState<boolean>(true);
+  const [isOpened, setIsOpened] = useState<boolean>(false);
 
   const handleMenuClosure = () => {
     setIsOpened(false);
@@ -14,7 +14,7 @@ export default function SidebarMenu() {
 
   return (
     <nav 
-      className={`absolute top-0 left-0 flex min-h-screen w-[200px] flex-col justify-between px-3 py-8 bg-gray-600 dark:bg-slate-800 ${isOpened ? 'top-0 left-0': 'top-0 left-[-200px]'} duration-200`}>
+      className={`absolute top-0 left-0 flex min-h-screen w-[300px] flex-col justify-between px-3 py-8 bg-gray-600 dark:bg-slate-800 ${isOpened ? 'top-0 left-0': 'top-0 left-[-300px] '} duration-200`}>
       <div className="flex flex-col gap-9">
         <p className="text-xl font-bold px-2 border-b-2 p-1">
           My portfolio
@@ -26,7 +26,7 @@ export default function SidebarMenu() {
         </div>
       </div>
       <ThemeSwitcher />
-      <div className="absolute top-2/4 translate-y-[-50%] pl-3 left-[176px] flex justify-center items-center rounded-r-full w-12 h-12 bg-gray-600 dark:bg-slate-800 duration-200"
+      <div className="absolute top-2/4 translate-y-[-50%] pl-3 left-[276px]  flex justify-center items-center rounded-r-full w-12 h-12 bg-gray-600 dark:bg-slate-800 duration-200"
       onClick={() => setIsOpened(!isOpened)}>
         {isOpened ? <AiOutlineArrowLeft size={25}/> : <AiOutlineArrowRight size={25}/>}
       </div>
