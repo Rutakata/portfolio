@@ -5,6 +5,9 @@ export async function getProjects() {
     method: 'GET',
     headers: {
       'Content-type': 'application/json'
+    },
+    next: {
+      revalidate: 10
     }
   })
 
