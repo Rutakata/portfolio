@@ -17,12 +17,15 @@ export default function SidebarMenu() {
 
   return (
     <nav 
-      className={`absolute top-0 left-0 flex min-h-full w-[300px] flex-col justify-between px-3 py-8 bg-gray-600 dark:bg-slate-800 ${isOpened ? 'top-0 left-0': 'top-0 left-[-300px] '} duration-200`}>
+      className={`fixed top-0 left-0 flex min-h-full w-[300px] flex-col justify-between px-3 py-8 bg-gray-600 dark:bg-slate-800 ${isOpened ? 'top-0 left-0': 'top-0 left-[-300px] '} duration-200`}>
       <div className="flex flex-col gap-9">
-        <p className="text-xl font-bold px-2 border-b-2 p-1">
-          Vlad Pelishenko
-        </p>
-        <div className='flex flex-col gap-4' onClick={handleMenuClosure}>
+        {/* <div className="flex flex-row justify-between p-2 border-b-2 items-center"> */}
+          <p className="text-2xl p-2 border-b-2 font-bold">
+            Vlad Pelishenko
+          </p>
+            
+        {/* </div> */}
+        <div className='flex flex-col gap-4'>
           <CustomLink href='/' text='Home' pathName={currentPath} icon={<AiFillHome size={25} />} />
           <CustomLink href='/about-me' text='About me' pathName={currentPath} icon={<AiFillInfoCircle size={25} />} />
           <CustomLink href='/projects' text='Projects' pathName={currentPath} icon={<AiFillAppstore size={25} />} />
@@ -30,8 +33,8 @@ export default function SidebarMenu() {
         </div>
       </div>
       <ThemeSwitcher />
-      <div className="absolute top-2/4 translate-y-[-50%] pl-3 left-[276px]  flex justify-center items-center rounded-r-full w-12 h-12 bg-gray-600 dark:bg-slate-800 duration-200"
-      onClick={() => setIsOpened(!isOpened)}>
+      <div className="absolute translate-y-[-50%] pl-3 left-[276px] flex justify-center items-center rounded-r-full w-12 h-12 bg-gray-600 dark:bg-slate-800 duration-200"
+        onClick={() => setIsOpened(!isOpened)}>
         {isOpened ? <AiOutlineArrowLeft size={25}/> : <AiOutlineArrowRight size={25}/>}
       </div>
     </nav> 

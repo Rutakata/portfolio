@@ -1,3 +1,5 @@
+import Badge from "@/components/common/Badge";
+import GradientPageHeader from "@/components/common/GradientPageHeader";
 import { getProjectDetails } from "@/lib/requests/getProjectDetails";
 import { getProjects } from "@/lib/requests/getProjects";
 import { Project } from "@/lib/types";
@@ -16,12 +18,22 @@ export async function generateStaticParams() {
 }
 
 export default async function ProjectDetails({params}: Props) {
-  const projectDetaild: Project = await getProjectDetails(params.projectId);
+  const projectDetails: Project = await getProjectDetails(params.projectId);
 
   return (
-    <main className="flex-grow xs:px-4 xs:pt-7 sm:p-10">
-      <h1>{projectDetaild.title}</h1>
-      <h2>{projectDetaild.description}</h2>
-    </main>
+    <>
+      <GradientPageHeader>{projectDetails.title}</GradientPageHeader>
+      <p className="text-2xl pb-4">
+        {projectDetails.description}
+      </p>
+      <div className="flex gap-2 xs:overflow-x-auto sm:overflow-y-hidden">
+        Used technologies:
+        {
+          projectDetails.tech_stack.map((tech: string) => (
+            <Badge text={tech} key={tech} />
+          ))
+        }
+      </div>
+    </>
   )
 }

@@ -18,7 +18,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       <body className={inter.className + ` min-h-screen flex flex-col dark:bg-slate-900 relative`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SidebarMenu />
-          {children}
+          <main className='xs:px-5 sm:px-7 md:px-24 lg:px-40 xl:px-72 xs:py-7 sm:py-10 flex-grow'>
+            {children}
+          </main>
           <Footer />
         </ThemeProvider>
       </body>

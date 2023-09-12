@@ -14,7 +14,7 @@ export default async function Projects() {
   const projects = await getProjects();
 
   return (
-    <main className="flex-grow xs:px-4 xs:pt-7 sm:p-10">
+    <>
       <GradientPageHeader>Projects</GradientPageHeader>
       <div className="flex xs:flex-col sm:flex-col md:flex-row lg:flex-row xs:gap-5 md:gap-5 lg:gap-5">
       {
@@ -23,6 +23,6 @@ export default async function Projects() {
         ))
       }
       </div>
-    </main>
+    </>
   )
 }

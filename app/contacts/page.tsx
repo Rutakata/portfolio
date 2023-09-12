@@ -15,7 +15,7 @@ export default function Contacts() {
                     {icon: FaTelegram, text: 'https://t.me/Veternum', isLink: true, placeholder: 'Telegram'}]
 
   return (
-    <main className='flex-grow xs:px-4 xs:pt-7 sm:p-10'>
+    <>
       <GradientPageHeader>How can you contact me?</GradientPageHeader>
       {/* <h1 className='font-extrabold text-transparent text-6xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xs:mb-10 sm:mb-5 xs:text-center sm:text-left pl-0'>How can you contact me?</h1> */}
       <div>
@@ -31,6 +31,6 @@ export default function Contacts() {
           }
         </ul>
       </div>
-    </main>
+    </>
   )
 }
