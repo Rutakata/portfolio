@@ -19,7 +19,7 @@ export default async function ProjectDetails({params}: Props) {
   const projectDetaild: Project = await getProjectDetails(params.projectId);
 
   return (
-    <main className="flex-grow xs:p-4 sm:p-10">
+    <main className="flex-grow xs:px-4 xs:pt-7 sm:p-10">
       <h1>{projectDetaild.title}</h1>
       <h2>{projectDetaild.description}</h2>
     </main>
