@@ -16,7 +16,7 @@ const config: Config = {
       },
       colors: {
         'yellow': "#e0bb00"
-      }
+      },
     },
     screens: {
       'xs': '360px',

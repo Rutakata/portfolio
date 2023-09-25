@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(31 41 55);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.fade-in {
+  animation-name: fadein;
+  animation-duration: 300ms;
+}
+
+@keyframes fadein {
+  from {
+    visibility: 0;
+    transform: translateY(300%);
+  }
+  to {
+    visibility: 1;
+    transform: translateY(0%);
+  }
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

@@ -1,7 +1,9 @@
+'use client'
 import { MdEmail } from 'react-icons/md';
 import { FaLinkedin, FaTelegram } from 'react-icons/fa';
 import GradientPageHeader from '@/components/common/GradientPageHeader';
 import { Metadata } from 'next';
+import { useState } from 'react';
 
 
 export const metadata: Metadata = {
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
 export default function Contacts() {
   const contacts = [{icon: MdEmail, text: 'vladpelishenko14@gmail.com', isLink: false, placeholder: 'Email'},
                     {icon: FaLinkedin, text: 'https://www.linkedin.com/in/vlad-pelishenko/', isLink: true, placeholder: 'LinkedIn'},
-                    {icon: FaTelegram, text: 'https://t.me/Veternum', isLink: true, placeholder: 'Telegram'}]
+                    {icon: FaTelegram, text: 'https://t.me/Veternum', isLink: true, placeholder: 'Telegram'}];
 
   return (
     <>
@@ -22,12 +24,14 @@ export default function Contacts() {
         <h2 className='xs:text-center sm:text-left xs:text-4xl sm:text-3xl pb-3'>Choose what you like more!</h2>
         <ul className='flex flex-col gap-3 sm:pl-5 break-words'>
           {
-            contacts.map(contact => (
+            contacts.map(contact => {
+              return(
               <li key={contact.placeholder} className='flex xs:flex-col sm:flex-row text-center items-center gap-2 hover:dark:text-yellow duration-75 hover:text-gray-500 text-2xl'>
                 {<contact.icon size={25} />}
                 {contact.isLink ? <a href={contact.text}>{contact.placeholder}</a> : contact.text}
               </li>
-            ))
+              )
+            })
           }
         </ul>
       </div>
