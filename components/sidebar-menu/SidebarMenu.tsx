@@ -26,10 +26,10 @@ export default function SidebarMenu() {
             
         {/* </div> */}
         <div className='flex flex-col gap-4'>
-          <CustomLink href='/' text='Home' pathName={currentPath} icon={<AiFillHome size={25} />} />
-          <CustomLink href='/about-me' text='About me' pathName={currentPath} icon={<AiFillInfoCircle size={25} />} />
-          <CustomLink href='/projects' text='Projects' pathName={currentPath} icon={<AiFillAppstore size={25} />} />
-          <CustomLink href='/contacts' text='Contacts' pathName={currentPath} icon={<MdContacts size={25} />} />
+          <CustomLink href='/' text='Home' newTab={false} pathName={currentPath} icon={<AiFillHome size={25} />} />
+          <CustomLink href='/about-me' text='About me' newTab={false} pathName={currentPath} icon={<AiFillInfoCircle size={25} />} />
+          <CustomLink href='/projects' text='Projects' newTab={false} pathName={currentPath} icon={<AiFillAppstore size={25} />} />
+          <CustomLink href='/contacts' text='Contacts' newTab={false} pathName={currentPath} icon={<MdContacts size={25} />} />
         </div>
       </div>
       <ThemeSwitcher />

@@ -43,7 +43,7 @@ export default async function ProjectDetails({params}: Props) {
         <div className="flex flex-col gap-2 w-[20%]">
         {  
           Object.entries(projectDetails.links)
-            .map((entry: string[]) => <CustomLink href={entry[1]} text={entry[0]} newTab={true} />)
+            .map((entry: string[]) => <CustomLink key={entry[1]} href={entry[1]} text={entry[0]} newTab={true} />)
         }
         </div>
       </div>
