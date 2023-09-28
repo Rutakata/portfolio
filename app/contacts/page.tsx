@@ -1,4 +1,3 @@
-'use client'
 import { MdEmail } from 'react-icons/md';
 import { FaLinkedin, FaTelegram } from 'react-icons/fa';
 import GradientPageHeader from '@/components/common/GradientPageHeader';
